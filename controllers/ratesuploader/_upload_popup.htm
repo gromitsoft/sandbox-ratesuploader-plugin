@@ -1,0 +1,27 @@
+<form>
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">×</button>
+        <h4 class="modal-title">Загрузите файл</h4>
+    </div>
+    <div class="modal-body">
+        <?= Form::sessionKey() ?>
+        <?= $this->widget->ratesUploadForm->render() ?>
+    </div>
+    <div class="modal-footer">
+        <div class="loading-indicator-container">
+            <button type="button"
+                    class="btn btn-primary"
+                    data-request="onImport"
+                    data-request-validate=""
+                    data-load-indicator="Импорт..."
+                    data-request-success="$('.control-popup').popup('hide')">
+                Импортировать
+            </button>
+            <button type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal">
+                Закрыть
+            </button>
+        </div>
+    </div>
+</form>
